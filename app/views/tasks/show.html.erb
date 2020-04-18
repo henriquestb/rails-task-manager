@@ -1,0 +1,16 @@
+<div class="container">
+<h1><%= @task.title %></h1>
+<h5><%= link_to "Edit this task", update_task_path %></h5>
+</div>
+<p><%= @task.details %></p>
+<div class="align">
+    <% if @task.completed %>
+      <i class="fas fa-check" ></i>
+      <p>Congrats, you completed you task</p>
+    <% else %>
+      <i class="far fa-square"></i>
+      <p>Go work motherfucker</p>
+    <% end %>
+  </div>
+<h5><%= link_to "Back to tasks menu", tasks_path %></h5>
+
